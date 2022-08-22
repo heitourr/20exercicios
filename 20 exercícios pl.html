@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<script>
+	function pulalinha() {
+
+		document.write("<br><br>");
+	}
+
+//1
+var base, altura, area;
+base = window.prompt("Digite o tamanho da base do retângulo");
+altura = window.prompt("Digite o tamanho da altura do retângulo");
+area = base * altura;
+
+document.write("a área do retângulo é " + area);
+pulalinha();
+
+//2
+var aresta;
+aresta = window.prompt("Escreva a aresta do quadrado");
+aresta = aresta * aresta; 
+
+document.write("a área do quadrado é " + aresta);
+
+//3
+var diagonal, area2;
+diagonal = window.prompt("digite o valor da diagonal do quadrado ");
+area2 = (diagonal * diagonal)/2;
+pulalinha();
+document.write("a área do quadrado é " + area2);
+
+//4
+var base2, altura2, area3;
+base2 = window.prompt("digite o valor da base do triângulo");
+altura2 = window.prompt("digite o valor da altura do triângulo");
+area3 = (base2 * altura2)/2;
+pulalinha();
+document.write("a área do triângulo é de " + area3);
+
+//5
+var v1, v2, v3, v4, media;
+v1 = parseInt(window.prompt("escreva o primeiro valor "));
+v2 = parseInt(window.prompt("escreva o segundo valor "));
+v3 = parseInt(window.prompt("escreva o terceiro valor "));
+v4 = parseInt(window.prompt("escreva o quarto valor "));
+media = (v1 + v2 + v3 + v4)/4;
+pulalinha();
+document.write("A media desses valores é " + media);
+
+//6
+var valor1, valor2, raiz;
+valor1 = window.prompt("escreva o primeiro valor ");
+valor2 = window.prompt("escreva o segundo valor ");
+raiz = Math.sqrt(valor1 * valor2);
+pulalinha();
+document.write("a média geométrica desses dois números é " + raiz);
+
+//7
+var milhas, quilometros, metros;
+milhas = window.prompt("escreva um valor de milhas marítimas");
+metros = milhas * 1852;
+quilometros = metros / 1000;
+pulalinha();
+document.write("o valor em quilometros é de " + quilometros);
+
+//8
+var f, c;
+c = window.prompt("digite o valor em graus Celsius");
+f = (1.8 * c) + 32;
+pulalinha();
+document.write("O valor em graus Fahrenheit é de " + f + "°");
+
+//9
+var n1, n2;
+n1 = window.prompt("escreva o primeiro número");
+n2 = window.prompt("escreva o segundo número");
+
+if (n1 > n2)
+{
+	pulalinha();
+	document.write("O maior é " + n1);
+}
+else if (n2 > n1)
+{
+	pulalinha();
+	document.write("O maior é " + n2);
+}
+
+//10
+var numero1, numero2;
+
+numero1 = window.prompt("escreva o primeiro número");
+numero2 = window.prompt("escreva o segundo número");
+
+if (numero1 > numero2)
+{
+	pulalinha();
+	document.write("O maior é " + n1);
+}
+else if (numero2 > numero1)
+{
+	pulalinha();
+	document.write("O maior é " + n2);
+}
+else
+{
+	pulalinha()
+	document.write("Numeros iguais");
+}
+
+//11
+var p1, p2, media2;
+
+p1 = window.prompt("Escreva o valor da primeira prova");
+p2 = window.prompt("Escreva o valor da segunda prova");
+
+media2 = (p1 + (2 * p2))/3
+if (media2 >= 6)
+{
+	pulalinha();
+	document.write("APROVADO");
+}
+else if (media < 6)
+{
+	pulalinha();
+	document.write("REPROVADO");
+}
+//12
+var altura3, peso, relacao;
+
+altura3 = window.prompt("Digite a sua altura");
+peso = window.prompt("Digite o seu peso");
+
+relacao = peso/(altura3 * altura3);
+
+if (relacao < 20) 
+{
+	pulalinha();
+	document.write("Abaixo do Peso");
+}
+else if (20 <= relacao < 25)
+{
+	pulalinha();
+	document.write("Peso Ideal");
+} 
+else if (relacao >= 25)
+{
+	pulalinha();
+	document.write("Acima do Peso");
+}
+//13
+var num1, num2, num3;
+
+num1 = window.prompt("Digite o primeiro lado");
+num2 = window.prompt("Digite o segundo lado");
+num3 = window.prompt("Digite o terceiro lado");
+
+if (num1 + num2 > num3 && num2 + num3 > num1 && num1 + num3 > num2)
+{
+	if (num1 != num2 && num2 != num3 && num1 != num3)
+	{
+		pulalinha();
+		document.write("Triângulo Escaleno");
+	}
+	else if ((num1 == num2 && num2 != num3) || (num1 == num3 && num3 != num2) || (num2 == num3 && num3 != num1))
+	{
+		pulalinha();
+		document.write("Triângulo Isóseles");
+	}
+	else if (num1 == num2 && num2 == num3)
+	{ 
+		pulalinha();
+		document.write("Triângulo Equilátero");
+	}
+} 
+else
+{
+	pulalinha();
+	document.write("Não é um triângulo");
+}
+//14
+ var la, lb, lc;
+la = window.prompt("Digite um valor qualquer: ");
+lb = window.prompt("Digite um valor qualquer: ");
+lc = window.prompt("Digite um valor qualquer: ");
+if((la > lb) && (la > lc))
+   {
+    if ((la*la) == (lb*lb)+(lc*lc))
+       {
+            document.write("Os valores formam um triângulo retângulo. <br>");
+       }
+    else
+       {
+            document.write("Os valores não formam um triângulo retângulo. <br>");
+       }
+   }
+    else if ((lb > la) && (lb > lc))
+       {
+            if ((lb*lb) == (la*la)+(lc*lc))
+               {
+                 document.write("Os valores formam um triângulo retângulo. <br>");
+               }
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
+        }
+        else if ((lc > la) && (lc > lb))
+        {
+            if ((lc*lc) == (la*la)+(lb*lb))
+            {
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            } 
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
+        }
+        else
+        {
+            document.write("Os valores não formam um triângulo retângulo. <br>");
+        }
+//15
+var val1,  val2;
+        val1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        do
+        {
+            val2 = parseInt(window.prompt("Digite um valor qualquer maior que o anterior: "));
+        } while (val2 <= val1)
+
+        document.write(val2 + " é maior que " + val1 + "<br> <br>");
+//16
+var contador = 1;
+var multiplicador = 5;
+pulalinha();
+document.write("Tabuada do 5");
+do 
+{
+	document.write("<br>");
+	document.write(multiplicador + " * " + contador + " = " + contador * multiplicador);
+	contador++;
+} while (contador <=10)
+
+//17
+var valorp;
+var contador2 = 1
+do 
+{
+	valorp = window.prompt("escreva um valor positivo");
+} while (valorp < 1)
+
+pulalinha()
+document.write("Tabuada do " + valorp);
+do 
+{
+	document.write("<br>");
+	document.write(valorp + " * " + contador2 + " = " + valorp * contador2);
+	contador2++;
+} while (contador2 <= 10)
+
+
+  function tabuada(...args) 
+        {
+            for (const number of args) 
+            {
+                construirTabuada(number);
+            }
+        }
+
+        function construirTabuada(numero) 
+        {
+            let color_td; 
+
+            document.write("<table border='1px' style='margin: 10px'>");
+            color_td = "#ccc";
+            document.write(`<thead>Tabuada do número: ${numero}</thead>`);  
+            document.write("<td style='width:30px;background-color: " + color_td + "'>Multiplicando</td>");
+
+            for (let i = 1; i <= 10; i++) 
+            {
+                document.write("<td style='width:30px;background-color: " + color_td + "'>" + i + "</td>");
+            }
+            document.write("<tr style='height:30px;'>");
+            color_td = "#fff";
+            document.write("<td style='width:30px;background-color: " + color_td + "'>Resultado</td>");
+
+            for (let j = 1; j <= 10; j++) 
+            {
+                document.write("<td style='width:30px;background-color:" + color_td + "'>" + j * numero + "</td>");
+            }
+            document.write("</tr>");
+            document.write("</table>"); 
+        }
+
+        tabuada(5);
+ var tab;
+        do
+        {
+        tab = window.prompt("Digite um valor positivo qualquer para exibição da sua respectiva tabuada.");
+        } while(tab <= 0)
+        tabuada(tab);
+
+        var contador = 1;
+        var somador = 0;
+        do
+        {
+            somador = contador + somador;
+            contador++
+        } while(contador <= 100)
+        document.write("A soma de todos os números inteiros positivos de 1 a 100 resulta em: " + somador + "<br><br>");
+
+        var nmr1 = 0;
+        var nmr2 = 1; 
+        var k;
+        document.write("Os trinta primeiros números da sequência fibonacci são: 1 ");
+        for (var p = 0; p < 29; p++)
+        {
+            k = nmr1;
+            nmr1 = nmr2;
+            nmr2 = k + nmr1;
+
+            document.write(nmr2 + "  ");
+        }
+</script>
+</body>
+</html>
